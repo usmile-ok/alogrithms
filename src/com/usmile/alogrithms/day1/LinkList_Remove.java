@@ -20,7 +20,7 @@ class LinkList {
     Node head;
     Node tail;
 
-    static class Node {
+    private static class Node {
         int value;
         Node next;
     }
