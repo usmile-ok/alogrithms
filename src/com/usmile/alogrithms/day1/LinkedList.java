@@ -1,26 +1,10 @@
 package com.usmile.alogrithms.day1;
 
-public class LinkList_Remove {
-    public static void main(String[] args) {
-        LinkList list = new LinkList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-
-        list.remove(5);
-
-        System.out.println("End...");
-    }
-}
-
-
-class LinkList {
+public class LinkedList {
     Node head;
     Node tail;
 
-    private static class Node {
+    public static class Node {
         int value;
         Node next;
     }
@@ -47,6 +31,7 @@ class LinkList {
             temp = temp.next;
         }
 
+        // 如果temp节点不为null，表示找到需要删除的节点
         if (null != temp) {
             // 需要删除的节点为头节点
             if (null == prev) {
