@@ -1,8 +1,6 @@
 package com.usmile.alogrithms.leetcode;
 
 
-import java.util.Stack;
-
 /**
  * 20. 有效的括号
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
@@ -12,15 +10,15 @@ import java.util.Stack;
  * 左括号必须用相同类型的右括号闭合。
  * 左括号必须以正确的顺序闭合。
  */
-public class LeetCode_20 {
+public class LeetCode_0020 {
     public static void main(String[] args) {
         String in = "()[]{}";
-        Solution1 solution1 = new Solution1();
+        LeetCode_0020_Solution1 solution1 = new LeetCode_0020_Solution1();
         System.out.println(solution1.isValid(in));
     }
 }
 
-class Solution1 {
+class LeetCode_0020_Solution1 {
     public boolean isValid(String s) {
         int length = s.length();
         if (0 != length % 2) {
