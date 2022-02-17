@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.day1;
+package com.usmile.alogrithms.linklist;
 
 /**
  * 翻转链表
@@ -13,7 +13,7 @@ public class LinkedList_Reverse {
         node2.next = node3;
         node3.next = node4;
         ListNode listNode = reverseList(node1);
-        System.out.println("End...");
+        System.out.println("End..." + listNode);
     }
 
     private static ListNode reverseList(ListNode head) {

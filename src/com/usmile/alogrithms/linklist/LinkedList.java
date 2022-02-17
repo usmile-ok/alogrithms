@@ -1,8 +1,8 @@
-package com.usmile.alogrithms.day1;
+package com.usmile.alogrithms.linklist;
 
 public class LinkedList {
     Node head;
-    Node tail;
+    Node tail; // 单向链表没有必要添加尾节点
 
     public static class Node {
         int value;
