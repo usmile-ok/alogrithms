@@ -41,3 +41,30 @@ class CQueue1 {
         return right.pop();
     }
 }
+
+/**
+ * 优化appendTail
+ */
+class CQueue2 {
+    Stack<Integer> left = new Stack<>();
+
+    Stack<Integer> right = new Stack<>();
+
+    // 追加的时候只需要追加到left
+    public void appendTail(int value) {
+        left.push(value);
+    }
+
+    public int deleteHead() {
+        if (left.isEmpty() && right.isEmpty()) {
+            return -1;
+        }
+        if (right.isEmpty()) {
+            while(!left.isEmpty()) {
+                right.push(left.pop());
+            }
+        }
+
+        return right.pop();
+    }
+}
