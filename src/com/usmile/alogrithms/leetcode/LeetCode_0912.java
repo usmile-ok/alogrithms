@@ -1,5 +1,7 @@
 package com.usmile.alogrithms.leetcode;
 
+import java.util.ArrayList;
+
 /**
  * 912. 排序数组
  * 给你一个整数数组 nums，请你将该数组升序排列。
@@ -144,3 +146,48 @@ class LeetCode_0912_Solution5 {
         return nums;
     }
 }
+
+/**
+ * 希尔排序
+ *      插入排序相对于大规模乱序数组性能较低
+ *  思想：先使数组中任意间隔为h的元素（子数组）有序，然后再对全局进行排序
+ */
+class LeetCode_0912_Solution6 {
+    public int[] sortArray(int[] nums) {
+        // 1. 计算递增序列
+        int n = nums.length;
+        ArrayList<Integer> list = new ArrayList<>();
+        int k = 1;
+        int h;
+        do {
+            h = ((int)Math.pow(3, k) - 1) / 2;
+            if (h > n / 3) break;
+            list.add(h); // 1, 4, 13, 40, 121......
+            k++;
+        } while (h <= n / 3);
+
+        if (list.isEmpty()) {
+            list.add(1);
+        }
+
+        // 2. 希尔排序
+        for (k = list.size() - 1; k >= 0 ; k--) { // 倒序遍历
+            h = list.get(k);
+            // 将数组变为 h 有序
+            for (int i = h; i < n; i++) {
+                for (int j = i; j >= h; j = j - h) {
+                    if (nums[j] < nums[j - h]) {
+                        int temp = nums[j];
+                        nums[j] = nums[j - h];
+                        nums[j - h] = temp;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+
+        return nums;
+    }
+}
+
