@@ -34,18 +34,17 @@ public class LeetCode_0283 {
  */
 class LeetCode_0283_Solution1 {
     public void moveZeroes(int[] nums) {
-        int fast = 0;
         int slow = 0;
-        for (; fast < nums.length; fast ++) {
+        for (int fast = 0; fast < nums.length; fast ++) {
             if (nums[fast] != 0) {
                 // 不做替换
-                if (slow == fast) {
-                    slow++;
-                } else {
-                    nums[slow] = nums[fast];
-                    slow ++;
-                    nums[fast] = 0;
+                if (slow != fast) {
+                    int temp = nums[fast];
+                    nums[fast] = nums[slow];
+                    nums[slow] = temp;
                 }
+
+                slow ++;
             }
         }
     }
