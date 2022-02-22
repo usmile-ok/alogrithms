@@ -34,6 +34,7 @@ class LeetCode_0179_Solution1 {
             newNums[i] = nums[i];
         }
 
+        // 最重要的排序逻辑
         Arrays.sort(newNums, (num1, num2)-> {
             String xy = "" + num1 + num2;
             String yx = "" + num2 + num1;
