@@ -47,3 +47,49 @@ class LeetCode_0075_Solution1 {
         }
     }
 }
+
+/**
+ * 计数排序 (原地)
+ */
+class LeetCode_0075_Solution2 {
+    public void sortColors(int[] nums) {
+        int[] count = new int[3];
+        for (int num : nums) {
+            count[num]++;
+        }
+
+        int index = 0;
+        for (int i = 0; i < count.length; i++) {
+            while ( 0 < count[i]) {
+                nums[index++] = i;
+                count[i]--;
+            }
+        }
+    }
+}
+
+/**
+ * 三路快排（一次分区）
+ */
+class LeetCode_0075_Solution3 {
+    public void sortColors(int[] nums) {
+        int zero = 0;
+        int two = nums.length - 1;
+        int i = 0;
+        while(i <= two) {
+            if (nums[i] == 0) {
+                swap(nums, zero++, i++);
+            } else if (nums[i] == 2) {
+                swap(nums, i, two--);
+            } else {
+                i++;
+            }
+        }
+    }
+
+    private void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+}
