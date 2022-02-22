@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.stack;
+package com.usmile.alogrithms.learn.stack;
 
 import java.util.NoSuchElementException;
 

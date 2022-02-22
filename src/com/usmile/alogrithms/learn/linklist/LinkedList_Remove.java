@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.linklist;
+package com.usmile.alogrithms.learn.linklist;
 
 public class LinkedList_Remove {
     public static void main(String[] args) {

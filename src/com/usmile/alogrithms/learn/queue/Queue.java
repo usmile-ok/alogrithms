@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.queue;
+package com.usmile.alogrithms.learn.queue;
 
 public interface Queue<E> {
     /**

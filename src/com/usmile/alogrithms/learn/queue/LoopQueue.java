@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.queue;
+package com.usmile.alogrithms.learn.queue;
 
 /**
  * @微信公众号 : 抖码课堂

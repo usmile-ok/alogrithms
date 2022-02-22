@@ -1,4 +1,4 @@
-package com.usmile.alogrithms.linklist;
+package com.usmile.alogrithms.learn.linklist;
 
 /**
  * 翻转链表
