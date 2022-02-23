@@ -10,15 +10,15 @@ package com.usmile.alogrithms.leetcode;
  * 左括号必须用相同类型的右括号闭合。
  * 左括号必须以正确的顺序闭合。
  */
-public class LeetCode_0020 {
+public class _0020 {
     public static void main(String[] args) {
         String in = "()[]{}";
-        LeetCode_0020_Solution1 solution1 = new LeetCode_0020_Solution1();
+        _0020_Solution1 solution1 = new _0020_Solution1();
         System.out.println(solution1.isValid(in));
     }
 }
 
-class LeetCode_0020_Solution1 {
+class _0020_Solution1 {
     public boolean isValid(String s) {
         int length = s.length();
         if (0 != length % 2) {

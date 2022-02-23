@@ -12,9 +12,9 @@ import java.util.Stack;
  * getMin() —— 检索栈中的最小元素。
  *
  */
-public class LeetCode_0155 {
+public class _0155 {
     public static void main(String[] args) {
-        LeetCode_0155_Solution1 stack = new LeetCode_0155_Solution1();
+        _0155_Solution1 stack = new _0155_Solution1();
         stack.push(-2);
         stack.push(0);
         stack.push(-3);
@@ -25,7 +25,7 @@ public class LeetCode_0155 {
     }
 }
 
-class LeetCode_0155_Solution1 {
+class _0155_Solution1 {
     private final Stack<Integer> dataStack = new Stack<>();
 
     private final Stack<Integer> minStack = new Stack<>();
@@ -65,7 +65,7 @@ class LeetCode_0155_Solution1 {
 }
 
 
-class LeetCode_0155_Solution2 {
+class _0155_Solution2 {
     private final Stack<Node> dataStack = new Stack<>();
 
     private static class Node {

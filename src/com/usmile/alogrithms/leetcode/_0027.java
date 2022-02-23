@@ -39,7 +39,7 @@ package com.usmile.alogrithms.leetcode;
  * 输出：5, nums = [0,1,4,0,3]
  * 解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素
  */
-public class LeetCode_0027 {
+public class _0027 {
     public static void main(String[] args) {
 
     }
@@ -48,7 +48,7 @@ public class LeetCode_0027 {
 /**
  * 快慢指针
  */
-class LeetCode_0027_Solution1 {
+class _0027_Solution1 {
     public int removeElement(int[] nums, int val) {
         int slow = 0;
         for (int fast = 0; fast < nums.length; fast++) {

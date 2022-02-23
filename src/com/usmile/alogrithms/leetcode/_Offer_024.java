@@ -11,10 +11,10 @@ package com.usmile.alogrithms.leetcode;
  * 输入: 1->2->3->4->5->NULL
  * 输出: 5->4->3->2->1->NULL
  */
-public class LeetCode_Offer_024 {
+public class _Offer_024 {
 }
 
-class LeetCode_Offer_024_Solution1 {
+class _Offer_024_Solution1 {
     public ListNode reverseList(ListNode head) {
         if (null == head || null == head.next) {
             return head;

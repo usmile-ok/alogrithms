@@ -17,14 +17,14 @@ package com.usmile.alogrithms.leetcode;
  * 输入：l1 = [], l2 = [0]
  * 输出：[0]
  */
-public class LeetCode_0021 {
+public class _0021 {
 }
 
 
 /**
  * 递归
  */
-class LeetCode_0021_Solution1 {
+class _0021_Solution1 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) {
             return list2;
@@ -43,7 +43,7 @@ class LeetCode_0021_Solution1 {
 /**
  * 迭代 (通过哨兵节点实现)
  */
-class LeetCode_0021_Solution2 {
+class _0021_Solution2 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // 哨兵节点
         ListNode temp = new ListNode(0);

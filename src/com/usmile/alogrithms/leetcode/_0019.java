@@ -20,14 +20,14 @@ package com.usmile.alogrithms.leetcode;
  * 输入：head = [1,2], n = 1
  * 输出：[1]
  */
-public class LeetCode_0019 {
+public class _0019 {
 }
 
 
 /**
  * 迭代（哨兵）
  */
-class LeetCode_0019_Solution1 {
+class _0019_Solution1 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         int count = 0;
         ListNode temp = head;

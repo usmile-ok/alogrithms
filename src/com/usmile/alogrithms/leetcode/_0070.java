@@ -24,14 +24,14 @@ package com.usmile.alogrithms.leetcode;
  * 2. 1 阶 + 2 阶
  * 3. 2 阶 + 1 阶
  */
-public class LeetCode_0070 {
+public class _0070 {
 }
 
 /**
  * 递归， 超时
  * O(n*n)
  */
-class LeetCode_0070_Solution1 {
+class _0070_Solution1 {
     public int climbStairs(int n) {
         if (0 == n || 1 == n) {
             return 1;

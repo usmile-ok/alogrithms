@@ -18,13 +18,13 @@ import java.util.Comparator;
  * 输入：intervals = [[7,10],[2,4]]
  * 输出：true
  */
-public class LeetCode_0252 {
+public class _0252 {
 }
 
 /**
  * 先按照会议开始时间进行排序
  */
-class LeetCode_0252_Solution1 {
+class _0252_Solution1 {
     public boolean canAttendMeetings(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(interval-> interval[0]));
         for (int i = 0; i < intervals.length - 1; i++) {

@@ -22,14 +22,14 @@ import java.util.List;
  * 输出：[[1,5]]
  * 解释：区间 [1,4] 和 [4,5] 可被视为重叠区间。
  */
-public class LeetCode_0056 {
+public class _0056 {
 }
 
 
 /**
  * 先按照第一个元素进行排序，再合并区间
  */
-class LeetCode_0056_Solution1 {
+class _0056_Solution1 {
     public int[][] merge(int[][] intervals) {
         if (intervals.length == 0) {
             return new int[0][2];

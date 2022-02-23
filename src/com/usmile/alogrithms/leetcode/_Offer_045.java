@@ -17,10 +17,10 @@ import java.util.Arrays;
  * 输入: [3,30,34,5,9]
  * 输出: "3033459"
  */
-public class LeetCode_Offer_045 {
+public class _Offer_045 {
 }
 
-class LeetCode_Offer_045_Solution1 {
+class _Offer_045_Solution1 {
     public String minNumber(int[] nums) {
         Integer[] newNums = new Integer[nums.length];
 

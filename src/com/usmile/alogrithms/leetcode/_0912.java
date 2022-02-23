@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * 1 <= nums.length <= 5 * 104
  * -5 * 104 <= nums[i] <= 5 * 104
  */
-public class LeetCode_0912 {
+public class _0912 {
 }
 
 /**
@@ -31,7 +31,7 @@ public class LeetCode_0912 {
  * O(n^2)
  * 超时
  */
-class LeetCode_0912_Solution1 {
+class _0912_Solution1 {
     public int[] sortArray(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length - i - 1; j++) {
@@ -51,7 +51,7 @@ class LeetCode_0912_Solution1 {
  * 减少冒泡排序数据交换次数
  * 超时
  */
-class LeetCode_0912_Solution2 {
+class _0912_Solution2 {
     public int[] sortArray(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             boolean switched = false;
@@ -78,7 +78,7 @@ class LeetCode_0912_Solution2 {
  * O(n^2)
  * 超时
  */
-class LeetCode_0912_Solution3 {
+class _0912_Solution3 {
     public int[] sortArray(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
@@ -103,7 +103,7 @@ class LeetCode_0912_Solution3 {
  * O(n^2)
  * 超时
  */
-class LeetCode_0912_Solution4 {
+class _0912_Solution4 {
     public int[] sortArray(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             for (int j = i; j > 0; j--) {
@@ -127,7 +127,7 @@ class LeetCode_0912_Solution4 {
  * O(n^2)
  * 超时
  */
-class LeetCode_0912_Solution5 {
+class _0912_Solution5 {
     public int[] sortArray(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             int data = nums[i];
@@ -152,7 +152,7 @@ class LeetCode_0912_Solution5 {
  *      插入排序相对于大规模乱序数组性能较低
  *  思想：先使数组中任意间隔为h的元素（子数组）有序，然后再对全局进行排序
  */
-class LeetCode_0912_Solution6 {
+class _0912_Solution6 {
     public int[] sortArray(int[] nums) {
         // 1. 计算递增序列
         int n = nums.length;

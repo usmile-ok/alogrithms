@@ -1,7 +1,6 @@
 package com.usmile.alogrithms.leetcode;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * 给定一组非负整数 nums，重新排列每个数的顺序（每个数不可拆分）使之组成一个最大的整数。
@@ -23,10 +22,10 @@ import java.util.Comparator;
  * 链接：https://leetcode-cn.com/problems/largest-number
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class LeetCode_0179 {
+public class _0179 {
 }
 
-class LeetCode_0179_Solution1 {
+class _0179_Solution1 {
     public String largestNumber(int[] nums) {
         Integer[] newNums = new Integer[nums.length];
 

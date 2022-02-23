@@ -19,11 +19,11 @@ package com.usmile.alogrithms.leetcode;
  * 输出: false
  * 解释："raceacar" 不是回文串
  */
-public class LeetCode_0125 {
+public class _0125 {
 }
 
 
-class LeetCode_0125_Solution {
+class _0125_Solution {
     public boolean isPalindrome(String s) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {

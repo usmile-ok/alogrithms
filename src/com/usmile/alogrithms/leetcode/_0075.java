@@ -19,13 +19,13 @@ package com.usmile.alogrithms.leetcode;
  * 输入：nums = [2,0,1]
  * 输出：[0,1,2]
  */
-public class LeetCode_0075 {
+public class _0075 {
 }
 
 /**
  * 计数排序
  */
-class LeetCode_0075_Solution1 {
+class _0075_Solution1 {
     public void sortColors(int[] nums) {
         int[] count = new int[3];
         for (int num : nums) {
@@ -51,7 +51,7 @@ class LeetCode_0075_Solution1 {
 /**
  * 计数排序 (原地)
  */
-class LeetCode_0075_Solution2 {
+class _0075_Solution2 {
     public void sortColors(int[] nums) {
         int[] count = new int[3];
         for (int num : nums) {
@@ -71,7 +71,7 @@ class LeetCode_0075_Solution2 {
 /**
  * 三路快排（一次分区）
  */
-class LeetCode_0075_Solution3 {
+class _0075_Solution3 {
     public void sortColors(int[] nums) {
         int zero = 0;
         int two = nums.length - 1;

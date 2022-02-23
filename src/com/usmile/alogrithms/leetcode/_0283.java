@@ -17,10 +17,10 @@ package com.usmile.alogrithms.leetcode;
  * 输入: nums = [0]
  * 输出: [0]
  */
-public class LeetCode_0283 {
+public class _0283 {
     public static void main(String[] args) {
         int[] nums = new int[]{0, 2, 0,5,8,0,1,0};
-        new LeetCode_0283_Solution1().moveZeroes(nums);
+        new _0283_Solution1().moveZeroes(nums);
         System.out.println("end");
     }
 }
@@ -32,7 +32,7 @@ public class LeetCode_0283 {
  * 快指针查找非0
  * 慢指针指向第一个0
  */
-class LeetCode_0283_Solution1 {
+class _0283_Solution1 {
     public void moveZeroes(int[] nums) {
         int slow = 0;
         for (int fast = 0; fast < nums.length; fast ++) {

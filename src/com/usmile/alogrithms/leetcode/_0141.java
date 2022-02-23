@@ -33,7 +33,7 @@ package com.usmile.alogrithms.leetcode;
  * 输出：false
  * 解释：链表中没有环
  */
-public class LeetCode_0141 {
+public class _0141 {
     public static void main(String[] args) {
 
     }
@@ -42,7 +42,7 @@ public class LeetCode_0141 {
 /**
  * 快慢指针，慢指针一次循环移动1个节点，快指针一次循环移动2个节点
  */
-class LeetCode_0141_Solution1{
+class _0141_Solution1 {
     public boolean hasCycle(ListNode head) {
         if(null == head || null == head.next) {
             return false;

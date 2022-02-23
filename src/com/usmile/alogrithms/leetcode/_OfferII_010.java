@@ -19,11 +19,11 @@ package com.usmile.alogrithms.leetcode;
  * 输入：n = 0
  * 输出：1
  */
-public class LeetCode_OfferII_010 {
+public class _OfferII_010 {
 }
 
 
-class LeetCode_OfferII_010_Solution1 {
+class _OfferII_010_Solution1 {
     public int numWays(int n) {
         if (0 == n || 1 == n) {
             return 1;
