@@ -28,6 +28,9 @@ public class _0034 {
 }
 
 
+/**
+ * 递归 + 二分
+ */
 class _0034_Solution1 {
     public int[] searchRange(int[] nums, int target) {
         int[] result = new int[]{-1, -1};
