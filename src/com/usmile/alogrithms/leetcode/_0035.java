@@ -40,6 +40,9 @@ public class _0035 {
 }
 
 
+/**
+ * 这里只用计算一种。代码里重复了。
+ */
 class _0035_Solution1 {
     public int searchInsert(int[] nums, int target) {
         if (nums[0] > target) {
@@ -61,22 +64,23 @@ class _0035_Solution1 {
                 right = mid - 1;
             }
         }
-        int leftIndex = left;
-
+//        int leftIndex = left;
         // 查找第一个大于等于target的值
-        left = 0;
-        right = nums.length - 1;
-        while (left < right) {
-            // mid 需要靠左， 不然会死循环
-            int mid = left + (right - left) / 2;
-            if (nums[mid] >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        int rightIndex = right;
+//        left = 0;
+//        right = nums.length - 1;
+//        while (left < right) {
+//            // mid 需要靠左， 不然会死循环
+//            int mid = left + (right - left) / 2;
+//            if (nums[mid] >= target) {
+//                right = mid;
+//            } else {
+//                left = mid + 1;
+//            }
+//        }
+//        int rightIndex = right;
+//
+//        return rightIndex == leftIndex ? leftIndex : leftIndex + 1;
 
-        return rightIndex == leftIndex ? leftIndex : leftIndex + 1;
+        return nums[left] == target ? left : left + 1;
     }
 }
