@@ -67,6 +67,7 @@ class _0852_Solution1 {
 
 /**
  * 二分查找
+ * 画图求解
  */
 class _0852_Solution2 {
     public int peakIndexInMountainArray(int[] arr) {
