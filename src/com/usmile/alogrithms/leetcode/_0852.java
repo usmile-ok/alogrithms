@@ -44,7 +44,7 @@ package com.usmile.alogrithms.leetcode;
  */
 public class _0852 {
     public static void main(String[] args) {
-        int[] arr = new int[]{3,4,5,1};
+        int[] arr = new int[]{3, 4, 5, 1};
         int i = new _0852_Solution2().peakIndexInMountainArray(arr);
         System.out.println(i);
     }
@@ -101,7 +101,7 @@ class _0852_Solution3 {
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            if (arr[mid] > arr[mid +1]){
+            if (arr[mid] > arr[mid + 1]) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
@@ -111,5 +111,3 @@ class _0852_Solution3 {
         return arr[left] > arr[right] ? left : right;
     }
 }
-
-
