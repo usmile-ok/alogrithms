@@ -111,16 +111,3 @@ interface MountainArray {
 
     int length();
 }
-
-class MountainArrayImpl implements MountainArray {
-
-    @Override
-    public int get(int index) {
-        return 0;
-    }
-
-    @Override
-    public int length() {
-        return 0;
-    }
-}
