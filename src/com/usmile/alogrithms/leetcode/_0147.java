@@ -42,22 +42,15 @@ class _0147_Solution1 {
         while (null != current) {
             if (prev.val > current.val) {
                 ListNode swapPrev = dummy;
-                ListNode swap = dummy.next;
-                while (swap.val <= current.val) {
-                    swapPrev = swap;
-                    swap = swap.next;
+                while (swapPrev.next.val <= current.val) {
+                    swapPrev = swapPrev.next;
                 }
-//                ListNode swapPrev = dummy;
-//                while (swapPrev.next.val <= current.val) {
-//                    swapPrev = swapPrev.next;
-//                }
 
-                ListNode mid = swapPrev.next;
+                prev.next = current.next;
+                current.next = swapPrev.next;
                 swapPrev.next = current;
-                ListNode temp = current.next;
-                prev.next = temp;
-                current.next = mid;
-                current = temp;
+
+                current = prev.next;
             } else {
                 prev = current;
                 current = current.next;
