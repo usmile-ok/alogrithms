@@ -32,9 +32,11 @@ class _0021_Solution1 {
             return list1;
         } else if (list1.val < list2.val) {
             list1.next = mergeTwoLists(list1.next, list2);
+
             return list1;
         } else {
             list2.next = mergeTwoLists(list1, list2.next);
+
             return list2;
         }
     }
@@ -48,7 +50,7 @@ class _0021_Solution2 {
         // 哨兵节点
         ListNode dummy = new ListNode(0);
         ListNode prev = dummy;
-        while (null != list1 && null != list2){
+        while (null != list1 && null != list2) {
             if (list1.val < list2.val) {
                 prev.next = list1;
                 list1 = list1.next;
