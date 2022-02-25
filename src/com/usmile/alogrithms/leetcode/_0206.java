@@ -23,6 +23,9 @@ package com.usmile.alogrithms.leetcode;
 public class _0206 {
 }
 
+/**
+ * 迭代解法
+ */
 class _0206_Solution1 {
     public ListNode reverseList(ListNode head) {
         if (null == head || head.next == null) {
@@ -41,6 +44,40 @@ class _0206_Solution1 {
         return prev;
     }
 
+    private static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+}
+
+/**
+ * 递归实现
+ */
+class _0206_Solution2 {
+    public ListNode reverseList(ListNode head) {
+        // 终止条件
+        if (null == head || head.next == null) {
+            return head;
+        }
+        ListNode listNode = reverseList(head.next);
+        // 归
+        head.next.next = head;
+        head.next = null;
+
+        return listNode;
+    }
 
     private static class ListNode {
         int val;
@@ -58,5 +95,4 @@ class _0206_Solution1 {
             this.next = next;
         }
     }
-
 }
