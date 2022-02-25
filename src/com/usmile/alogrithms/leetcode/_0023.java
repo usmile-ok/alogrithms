@@ -34,6 +34,9 @@ import java.util.List;
 public class _0023 {
 }
 
+/**
+ * 顺序合并
+ */
 class _0023_Solution1 {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) {
@@ -92,5 +95,74 @@ class _0023_Solution1 {
             this.next = next;
         }
     }
+}
 
+
+/**
+ * 利用分治思想（类似归并排序）
+ */
+class _0023_Solution2 {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+        if (lists.length == 1) {
+            return lists[0];
+        }
+
+        return mergeKLists(lists, 0, lists.length - 1);
+    }
+
+    public ListNode mergeKLists(ListNode[] lists, int left, int right) {
+        if (left == right) {
+            return lists[left];
+        }
+
+        int mid = left + (right - left)/ 2;
+        // 合并左节点
+        ListNode leftNode = mergeKLists(lists, left, mid);
+        // 合并右节点
+        ListNode rightNode = mergeKLists(lists, mid + 1, right);
+
+        // 合并左右节点
+        ListNode dummy = new ListNode(-1);
+        ListNode prev = dummy;
+        while (null != leftNode && null != rightNode) {
+            if (leftNode.val > rightNode.val) {
+                prev.next = rightNode;
+                rightNode = rightNode.next;
+            } else {
+                prev.next = leftNode;
+                leftNode = leftNode.next;
+            }
+            prev = prev.next;
+        }
+        if (null != leftNode) {
+            prev.next = leftNode;
+        }
+        if (null != rightNode) {
+            prev.next = rightNode;
+        }
+
+        return dummy.next;
+    }
+
+
+
+    private static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
 }
