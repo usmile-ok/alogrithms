@@ -106,6 +106,9 @@ class _0876_Solution2 {
     }
 }
 
+/**
+ * 个人理解相当于回溯
+ */
 class _0876_Solution3 {
     public ListNode middleNode(ListNode head) {
         List<ListNode> list = new ArrayList<>();
