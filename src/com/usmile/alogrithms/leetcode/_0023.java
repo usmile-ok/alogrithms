@@ -1,7 +1,5 @@
 package com.usmile.alogrithms.leetcode;
 
-import java.util.List;
-
 /**
  * 23. 合并K个升序链表
  * 给你一个链表数组，每个链表都已经按升序排列。
@@ -102,7 +100,7 @@ class _0023_Solution1 {
  * 利用分治思想（类似归并排序）
  */
 class _0023_Solution2 {
-    public ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeLists(ListNode[] lists) {
         if (lists.length == 0) {
             return null;
         }
@@ -110,19 +108,19 @@ class _0023_Solution2 {
             return lists[0];
         }
 
-        return mergeKLists(lists, 0, lists.length - 1);
+        return mergeLists(lists, 0, lists.length - 1);
     }
 
-    public ListNode mergeKLists(ListNode[] lists, int left, int right) {
+    public ListNode mergeLists(ListNode[] lists, int left, int right) {
         if (left == right) {
             return lists[left];
         }
 
         int mid = left + (right - left)/ 2;
         // 合并左节点
-        ListNode leftNode = mergeKLists(lists, left, mid);
+        ListNode leftNode = mergeLists(lists, left, mid);
         // 合并右节点
-        ListNode rightNode = mergeKLists(lists, mid + 1, right);
+        ListNode rightNode = mergeLists(lists, mid + 1, right);
 
         // 合并左右节点
         ListNode dummy = new ListNode(-1);
