@@ -46,8 +46,8 @@ class _0021_Solution1 {
 class _0021_Solution2 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // 哨兵节点
-        ListNode temp = new ListNode(0);
-        ListNode prev = temp;
+        ListNode dummy = new ListNode(0);
+        ListNode prev = dummy;
         while (null != list1 && null != list2){
             if (list1.val < list2.val) {
                 prev.next = list1;
@@ -66,6 +66,6 @@ class _0021_Solution2 {
             prev.next = list2;
         }
 
-        return temp.next;
+        return dummy.next;
     }
 }
