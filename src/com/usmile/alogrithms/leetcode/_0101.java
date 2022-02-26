@@ -29,7 +29,7 @@ public class _0101 {
  */
 class _0101_Solution1 {
     public boolean isSymmetric(TreeNode root) {
-        if (null == root || (null == root.left && null == root.right)) {
+        if (null == root) {
             return true;
         }
 
@@ -53,7 +53,7 @@ class _0101_Solution1 {
 }
 
 /**
- * 迭代
+ * 迭代(层序遍历BFS)
  */
 class _0101_Solution2 {
     @SuppressWarnings("all")
