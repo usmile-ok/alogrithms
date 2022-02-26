@@ -1,6 +1,6 @@
 package com.usmile.alogrithms.learn.linklist;
 
-public class LinkedList {
+public class LinkedListDemo {
     Node head;
     Node tail; // 单向链表没有必要添加尾节点
 

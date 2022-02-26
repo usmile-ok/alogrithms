@@ -73,25 +73,6 @@ class _0112_Solution1 {
             this.sum = sum;
         }
     }
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 }
 
 /**
@@ -133,23 +114,25 @@ class _0112_Solution2 {
             this.sum = sum;
         }
     }
+}
 
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode() {
+/**
+ * 递归实现
+ */
+class _0112_Solution3 {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        if (null == root) {
+            return false;
+        }
+        if (null == root.left && null == root.right) {
+            return targetSum - root.val == 0;
         }
 
-        TreeNode(int val) {
-            this.val = val;
+        boolean left = hasPathSum(root.left, targetSum - root.val);
+        if (left) {
+            return true;
         }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+        return hasPathSum(root.right, targetSum - root.val);
     }
 }

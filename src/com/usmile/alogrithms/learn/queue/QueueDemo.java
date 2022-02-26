@@ -1,6 +1,6 @@
 package com.usmile.alogrithms.learn.queue;
 
-public interface Queue<E> {
+public interface QueueDemo<E> {
     /**
      * 查询队列中的元素个数
      * @return

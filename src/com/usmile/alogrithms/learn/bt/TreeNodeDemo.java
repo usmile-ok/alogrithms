@@ -7,26 +7,26 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.Stack;
 
-public class TreeNode<T> {
+public class TreeNodeDemo<T> {
     T data;
-    TreeNode<T> left;
-    TreeNode<T> right;
+    TreeNodeDemo<T> left;
+    TreeNodeDemo<T> right;
 
-    public TreeNode(T data) {
+    public TreeNodeDemo(T data) {
         this.data = data;
     }
 
     // 前序遍历（利用栈的特性）-- 迭代
-    public static <T> List<T> preOrder(TreeNode<T> root) {
+    public static <T> List<T> preOrder(TreeNodeDemo<T> root) {
         List<T> result = new ArrayList<>();
         if (null == root) {
             return result;
         }
-        Stack<TreeNode<T>> nodeStack = new Stack<>();
+        Stack<TreeNodeDemo<T>> nodeStack = new Stack<>();
         nodeStack.push(root);
 
         while (!nodeStack.isEmpty()) {
-            TreeNode<T> pop = nodeStack.pop();
+            TreeNodeDemo<T> pop = nodeStack.pop();
             result.add(pop.data);
             if (null != pop.right) {
                 nodeStack.push(pop.right);
@@ -40,7 +40,7 @@ public class TreeNode<T> {
     }
 
     // 前序遍历（利用栈的特性）-- 递归
-    public static <T> List<T> preOrderR(TreeNode<T> root) {
+    public static <T> List<T> preOrderR(TreeNodeDemo<T> root) {
         List<T> result = new ArrayList<>();
         if (null == root) {
             return result;
@@ -54,21 +54,21 @@ public class TreeNode<T> {
     }
 
     // 中序遍历 - 迭代
-    public static <T> List<T> midOrder(TreeNode<T> root) {
+    public static <T> List<T> midOrder(TreeNodeDemo<T> root) {
         List<T> result = new ArrayList<>();
         if (null == root) {
             return result;
         }
-        Stack<TreeNode<T>> nodeStack = new Stack<>();
+        Stack<TreeNodeDemo<T>> nodeStack = new Stack<>();
 
-        TreeNode<T> current = root;
+        TreeNodeDemo<T> current = root;
         while (current != null || !nodeStack.isEmpty()) {
             while (null != current) {
                 nodeStack.push(current);
                 current = current.left;
             }
 
-            TreeNode<T> pop = nodeStack.pop();
+            TreeNodeDemo<T> pop = nodeStack.pop();
             result.add(pop.data);
 
             // 需要看一下右节点
@@ -79,7 +79,7 @@ public class TreeNode<T> {
     }
 
     // 中序遍历 - 递归
-    public static <T> List<T> midOrderR(TreeNode<T> root) {
+    public static <T> List<T> midOrderR(TreeNodeDemo<T> root) {
         List<T> result = new ArrayList<>();
         if (null == root) {
             return result;
@@ -94,16 +94,16 @@ public class TreeNode<T> {
 
     // 后序遍历
     // 思考为什么要对结果进行翻转
-    public static <T> List<T> postOrder(TreeNode<T> root) {
+    public static <T> List<T> postOrder(TreeNodeDemo<T> root) {
         ArrayList<T> result = new ArrayList<>();
         if (null == root) {
             return result;
         }
-        Stack<TreeNode<T>> nodeStack = new Stack<>();
+        Stack<TreeNodeDemo<T>> nodeStack = new Stack<>();
         nodeStack.push(root);
 
         while (!nodeStack.isEmpty()) {
-            TreeNode<T> pop = nodeStack.pop();
+            TreeNodeDemo<T> pop = nodeStack.pop();
             result.add(0, pop.data);
 //            result.add(pop.data);
             if (null != pop.left) {
@@ -118,7 +118,7 @@ public class TreeNode<T> {
     }
 
     // 后序遍历 - 递归
-    public static <T> List<T> postOrderR(TreeNode<T> root) {
+    public static <T> List<T> postOrderR(TreeNodeDemo<T> root) {
         List<T> result = new ArrayList<>();
         if (null == root) {
             return result;
@@ -133,16 +133,16 @@ public class TreeNode<T> {
 
     // 层序遍历
     // 利用队列先进先出辅助遍历
-    public static <T> List<T> levelOrder(TreeNode<T> root) {
+    public static <T> List<T> levelOrder(TreeNodeDemo<T> root) {
         ArrayList<T> result = new ArrayList<>();
         if (null == root) {
             return result;
         }
 
-        Queue<TreeNode<T>> queue = new LinkedList<>();
+        Queue<TreeNodeDemo<T>> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
-            TreeNode<T> current = queue.poll();
+            TreeNodeDemo<T> current = queue.poll();
             result.add(current.data);
             if (null != current.left) {
                 queue.offer(current.left);
@@ -157,13 +157,13 @@ public class TreeNode<T> {
 
     // 层序遍历  - 每层元素单独保存
     // 利用队列先进先出辅助遍历
-    public static <T> List<List<T>> levelOrder1(TreeNode<T> root) {
+    public static <T> List<List<T>> levelOrder1(TreeNodeDemo<T> root) {
         ArrayList<List<T>> result = new ArrayList<>();
         if (null == root) {
             return result;
         }
 
-        Queue<TreeNode<T>> queue = new LinkedList<>();
+        Queue<TreeNodeDemo<T>> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
             // 保存当前层的元素
@@ -171,7 +171,7 @@ public class TreeNode<T> {
             // 通过当层元素个数从队列取出元素
             int currentSize = queue.size();
             for (int i = 0; i < currentSize; i++) {
-                TreeNode<T> current = queue.poll();
+                TreeNodeDemo<T> current = queue.poll();
                 levels.add(Objects.requireNonNull(current).data);
                 if (null != current.left) {
                     queue.offer(current.left);
@@ -189,14 +189,14 @@ public class TreeNode<T> {
 
 
     public static void main(String[] args) {
-        TreeNode<Integer> node1 = new TreeNode<>(1);
-        TreeNode<Integer> node2 = new TreeNode<>(2);
-        TreeNode<Integer> node3 = new TreeNode<>(3);
-        TreeNode<Integer> node4 = new TreeNode<>(4);
-        TreeNode<Integer> node5 = new TreeNode<>(5);
-        TreeNode<Integer> node6 = new TreeNode<>(6);
-        TreeNode<Integer> node7 = new TreeNode<>(7);
-        TreeNode<Integer> node8 = new TreeNode<>(8);
+        TreeNodeDemo<Integer> node1 = new TreeNodeDemo<>(1);
+        TreeNodeDemo<Integer> node2 = new TreeNodeDemo<>(2);
+        TreeNodeDemo<Integer> node3 = new TreeNodeDemo<>(3);
+        TreeNodeDemo<Integer> node4 = new TreeNodeDemo<>(4);
+        TreeNodeDemo<Integer> node5 = new TreeNodeDemo<>(5);
+        TreeNodeDemo<Integer> node6 = new TreeNodeDemo<>(6);
+        TreeNodeDemo<Integer> node7 = new TreeNodeDemo<>(7);
+        TreeNodeDemo<Integer> node8 = new TreeNodeDemo<>(8);
 
         node1.left = node2;
         node1.right = node3;
@@ -206,7 +206,7 @@ public class TreeNode<T> {
         node3.right = node7;
         node4.left = node8;
 
-        List<Integer> integers = TreeNode.postOrderR(node1);
+        List<Integer> integers = TreeNodeDemo.postOrderR(node1);
 
         System.out.println(integers);
 

@@ -6,7 +6,7 @@ package com.usmile.alogrithms.learn.queue;
  * @作者 : 老汤
  */
 @SuppressWarnings("unchecked")
-public class LoopQueue<E> implements Queue<E> {
+public class LoopQueue<E> implements QueueDemo<E> {
     private E[] data;
     private int head;
     private int tail;

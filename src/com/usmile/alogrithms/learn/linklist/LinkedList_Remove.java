@@ -2,7 +2,7 @@ package com.usmile.alogrithms.learn.linklist;
 
 public class LinkedList_Remove {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedListDemo list = new LinkedListDemo();
         list.add(1);
         list.add(2);
         list.add(3);
