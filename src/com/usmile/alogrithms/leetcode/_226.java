@@ -1,7 +1,5 @@
 package com.usmile.alogrithms.leetcode;
 
-import com.usmile.alogrithms.learn.queue.QueueDemo;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -61,6 +59,7 @@ class _226_Solution1 {
 /**
  * 递归(DFS)
  */
+@SuppressWarnings("all")
 class _226_Solution2 {
     public TreeNode invertTree(TreeNode root) {
         if (null == root) {
