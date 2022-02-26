@@ -57,12 +57,19 @@ class _0100_Solution1 {
             if (curr1.val != curr2.val) {
                 return false;
             }
-            if ((null == curr1.left && null != curr2.left) || (null != curr1.left && null == curr2.left)) {
+
+            if (null == curr1.left ^ null == curr2.left) {
                 return false;
             }
-            if ((null == curr1.right && null != curr2.right) || (null != curr1.right && null == curr2.right)) {
+            if (null == curr1.right ^ null == curr2.right) {
                 return false;
             }
+//            if ((null == curr1.left && null != curr2.left) || (null != curr1.left && null == curr2.left)) {
+//                return false;
+//            }
+//            if ((null == curr1.right && null != curr2.right) || (null != curr1.right && null == curr2.right)) {
+//                return false;
+//            }
 
             if (curr1.left != null && curr2.left != null) {
                 queue1.offer(curr1.left);
