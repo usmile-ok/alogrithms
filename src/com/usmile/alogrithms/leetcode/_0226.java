@@ -26,7 +26,7 @@ import java.util.Queue;
  * 输入：root = []
  * 输出：[]
  */
-public class _226 {
+public class _0226 {
 }
 
 /**
