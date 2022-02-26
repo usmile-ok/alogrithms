@@ -93,3 +93,63 @@ class _0112_Solution1 {
         }
     }
 }
+
+/**
+ * 记录路径剩余和
+ */
+class _0112_Solution2 {
+    public boolean hasPathSum(TreeNode root, int targetSum) {
+        if (null == root) {
+            return false;
+        }
+        Stack<NodeSum> nodeStack = new Stack<>();
+        nodeStack.push(new NodeSum(root, targetSum - root.val));
+        while (!nodeStack.isEmpty()) {
+            NodeSum current = nodeStack.pop();
+            if (null == current.node.left && null == current.node.right) {
+                if (current.sum == 0) {
+                    return true;
+                }
+            }
+            if (null != current.node.right) {
+                nodeStack.push(new NodeSum(current.node.right, current.sum - current.node.right.val));
+            }
+            if (null != current.node.left) {
+                nodeStack.push(new NodeSum(current.node.left, current.sum - current.node.left.val));
+            }
+        }
+
+
+        return false;
+    }
+
+
+    private static class NodeSum {
+        TreeNode node;
+        int sum;
+
+        public NodeSum(TreeNode node, int sum) {
+            this.node = node;
+            this.sum = sum;
+        }
+    }
+
+    private static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+}
