@@ -136,7 +136,7 @@ class _0023_Solution2 {
 /**
  * 使用小顶堆（优先队列）
  */
-class _0023_Solution4 {
+class _0023_Solution3 {
     public ListNode mergeKLists(ListNode[] lists) {
         if (null == lists || 0 == lists.length ){
             return null;
