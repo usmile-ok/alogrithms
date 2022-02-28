@@ -28,7 +28,7 @@ import java.util.PriorityQueue;
  * kthLargest.add(9);   // return 8
  * kthLargest.add(4);   // return 8
  */
-public class _703 {
+public class _0703 {
 }
 
 @SuppressWarnings("all")
