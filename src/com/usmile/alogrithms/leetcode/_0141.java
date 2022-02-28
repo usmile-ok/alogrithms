@@ -60,14 +60,4 @@ class _0141_Solution1 {
         return true;
     }
 
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-
-            next = null;
-        }
-    }
 }

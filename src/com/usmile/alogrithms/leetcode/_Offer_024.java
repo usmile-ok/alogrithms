@@ -32,13 +32,3 @@ class _Offer_024_Solution1 {
         return prev;
     }
 }
-
-class ListNode {
-    int val;
-
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}

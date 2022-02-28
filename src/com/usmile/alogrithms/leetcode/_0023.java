@@ -1,5 +1,9 @@
 package com.usmile.alogrithms.leetcode;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * 23. 合并K个升序链表
  * 给你一个链表数组，每个链表都已经按升序排列。
@@ -75,24 +79,6 @@ class _0023_Solution1 {
 
         return dummy.next;
     }
-
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
 
 
@@ -144,23 +130,37 @@ class _0023_Solution2 {
 
         return dummy.next;
     }
+}
 
 
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
+/**
+ * 使用小顶堆（优先队列）
+ */
+class _0023_Solution4 {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (null == lists || 0 == lists.length ){
+            return null;
+        }
+        if (null == lists[0]) {
+            return null;
+        }
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
+        for (ListNode node : lists) {
+            if (null != node) {
+                queue.offer(node);
+            }
+        }
+        ListNode dummy = new ListNode(-1);
+        ListNode curr = dummy;
+        while (!queue.isEmpty()) {
+            ListNode node = queue.poll();
+            curr.next = node;
+            curr = curr.next;
+            if (null != node.next) {
+                queue.offer(node.next);
+            }
         }
 
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
+        return dummy.next;
     }
 }
