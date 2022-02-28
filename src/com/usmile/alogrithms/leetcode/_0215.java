@@ -1,7 +1,6 @@
 package com.usmile.alogrithms.leetcode;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -27,17 +26,37 @@ public class _0215 {
 /**
  * 使用大顶堆
  */
+@SuppressWarnings("all")
 class _0215_Solution1 {
     public int findKthLargest(int[] nums, int k) {
-        PriorityQueue<Integer> queue = new PriorityQueue<>((o1, o2) -> o2 - o1);
-        for (int num : nums) {
-            queue.offer(num);
+        int length = nums.length;
+        PriorityQueue<Integer> queue;
+        if (k < nums.length - k) {
+            queue = new PriorityQueue<>();
+            for (int i = 0; i < nums.length; i++) {
+                if (i < k) {
+                    queue.offer(nums[i]);
+                } else {
+                    if (nums[i] > queue.peek()) {
+                        queue.remove();
+                        queue.offer(nums[i]);
+                    }
+                }
+            }
+        } else {
+            queue = new PriorityQueue<>((o1, o2) -> o2 - o1);
+            for (int i = 0; i < length; i++) {
+                if (i < length - k + 1) {
+                    queue.offer(nums[i]);
+                } else {
+                    if (nums[i] < queue.peek()) {
+                        queue.remove();
+                        queue.offer(nums[i]);
+                    }
+                }
+            }
         }
-        for (int i = 1; i < k; i++) {
-            queue.remove();
-        }
-
-        return queue.poll();
+        return queue.peek();
     }
 }
 
