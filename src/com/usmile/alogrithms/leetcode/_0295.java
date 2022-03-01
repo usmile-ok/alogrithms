@@ -1,8 +1,6 @@
 package com.usmile.alogrithms.leetcode;
 
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
 
 /**
@@ -38,6 +36,7 @@ public class _0295 {
 /**
  * 使用堆的性质
  */
+@SuppressWarnings("all")
 class MedianFinder {
     // 大顶堆， 存储较小元素
     PriorityQueue<Integer> queMin;
